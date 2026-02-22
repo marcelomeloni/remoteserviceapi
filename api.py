@@ -27,7 +27,7 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY")
-TABLE_NAME   = "master_calouros_teste"
+TABLE_NAME   = "master_calouros"
 
 supabase: Client = None
 if SUPABASE_URL and SUPABASE_KEY:
@@ -366,4 +366,5 @@ def job_status(job_id):
 
 
 if __name__ == "__main__":
+
     app.run(debug=True, port=5000)
